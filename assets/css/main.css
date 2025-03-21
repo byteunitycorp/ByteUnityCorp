@@ -844,13 +844,13 @@ section,
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url("../img/hero-bg.jpg") top left;
+  background: url("../img/cover.png") top left;
   background-size: cover;
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 80%);
   position: absolute;
   bottom: 0;
   top: 0;
