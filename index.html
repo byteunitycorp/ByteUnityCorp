@@ -59,9 +59,15 @@ hr {
 </div>
 
 <script>
-  // Set the target date for the countdown
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 35); // 35 days from now
+  // Retrieve or set the target date for the countdown
+  let targetDate = localStorage.getItem("targetDate");
+  if (!targetDate) {
+    targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 35); // 35 days from now
+    localStorage.setItem("targetDate", targetDate);
+  } else {
+    targetDate = new Date(targetDate);
+  }
 
   function updateCountdown() {
     const now = new Date();
